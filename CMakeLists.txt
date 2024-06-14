@@ -7,4 +7,5 @@ add_executable(S1_01
         main.cpp
         exit/exit.h
         exit/exit.cpp
-        inscription/inscription.h)
+        inscription/inscription.h
+        inscription/inscription.cpp)
