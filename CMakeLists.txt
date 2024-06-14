@@ -8,4 +8,5 @@ add_executable(S1_01
         exit/exit.h
         exit/exit.cpp
         inscription/inscription.h
-        inscription/inscription.cpp)
+        inscription/inscription.cpp
+        mission/mission.h)

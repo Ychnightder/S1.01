@@ -5,17 +5,25 @@
 #include <string>
 using namespace std;
 
+    struct Entreprise{
+        int idEntreprise;
+        string nomEntreprise;
+        string roleEntreprise;
+    };
 
-extern const int nbRole;
-extern const char* roleTab[];
+    extern const int nbRole;
+    extern const char* roleTab[];
 
-extern int tailleTab;
-extern std::string* tabNom;
-extern int compteur;
 
-void initTabNom(int taille);
-void suppTabNom();
-void ajouterDansTabNom(std::string& nom);
-void inscription();
+    extern int tailleTab;
+    extern Entreprise* tabEntreprise;
+    extern int compteur;
+
+    void initTabEntreprise(int taille);
+    void suppTabEntreprise();
+    bool estDejaEntreprise(string& nom);
+    bool verifRole(string& role);
+    void inscription();
+
 
 #endif //S1_01_INSCRIPTION_H
