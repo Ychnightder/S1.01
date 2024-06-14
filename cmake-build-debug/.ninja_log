@@ -1,25 +1,9 @@
-# ninja log v5
-7	119	7400393540000000	CMakeFiles/S1_01.dir/exit/exit.cpp.obj	73b78592b5ace030
-5	300	7400393620000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-301	696	7400393620000000	S1_01.exe	4c4363ceab312030
-3	464	7400452480000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-10	465	7400452480000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-2	286	7400452940000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-6	298	7400452940000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-3	274	7400458960000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-7	286	7400458960000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-2	266	7400459500000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-7	271	7400459500000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-3	274	7400459640000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-9	282	7400459640000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-3	296	7400460320000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-30	304	7400460320000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-4	260	7400460840000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-3	316	7400464780000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-10	325	7400464780000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-325	711	7400464780000000	S1_01.exe	2ee3a2634b1acc8a
-3	272	7400465120000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-272	625	7400465140000000	S1_01.exe	2ee3a2634b1acc8a
-4	275	7400467900000000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-9	284	7400467900000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-285	713	7400467920000000	S1_01.exe	2ee3a2634b1acc8a
+# ninja log v6
+59	381	7400804360000000	CMakeFiles/S1_01.dir/exit/exit.cpp.obj	73b78592b5ace030
+50	486	7400804348600000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
+66	511	7400804360000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
+20	495	7400810480500000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
+185	519	7400810500000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
+519	916	7400810500000000	S1_01.exe	f3f0d84ec94534de
+18	378	7400811843600000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
+379	780	7400811860000000	S1_01.exe	f3f0d84ec94534de

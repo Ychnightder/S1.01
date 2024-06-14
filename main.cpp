@@ -2,15 +2,14 @@
 #include "exit/exit.h"
 #include "inscription/inscription.h"
 void init(){
-    initTabNom(100);
+    initTabEntreprise(100);
 }
 void supp(){
-    suppTabNom();
+    suppTabEntreprise();
 }
 
 int main() {
     init();
-    string r,nom;
     inscription();
     inscription();
     supp();

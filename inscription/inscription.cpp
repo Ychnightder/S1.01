@@ -5,74 +5,77 @@
 const int nbRole = 3; // Nombre de rôles
 const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
-int tailleTab;
-std::string* tabNom;
-int compteur;
+    int tailleTab = 0;
+    Entreprise* tabEntreprise = nullptr; // Initialisation de la variable globale
+    int compteur = 0;
 
-void initTabNom(int taille) {
-    if (taille > 0) {
-        tailleTab = taille;
-        tabNom = new std::string[tailleTab];
-    } else {
-        tabNom = nullptr;
-    }
-}
-
-void suppTabNom() {
-    delete[] tabNom;
-    tabNom = nullptr;
-}
-
-void ajouterDansTabNom(std::string& nom) {
-    for (int i = 0; i < tailleTab; ++i) {
-        if (tabNom[i].empty()) {
-            tabNom[i] = nom;
-            break; // Sortir après avoir ajouté le nom
-        }
-    }
-}
-
-void inscription() {
-    string role;
-    string nom;
-
-    cin >> role;
-    cin >> nom;
-    bool verif = true;
-
-    // Convertir le rôle en majuscules pour la vérification
-    for (char& c : role) {
-        c = std::toupper(c);
-    }
-
-    // Vérifier le rôle
-    bool roleCorrect = false;
-    for (int i = 0; i < nbRole; ++i) {
-        if (role == roleTab[i]) {
-            roleCorrect = true;
-            break;
+    void initTabEntreprise(int taille) {
+        if (taille > 0) {
+            tailleTab = taille;
+            tabEntreprise = new Entreprise[taille];
+        } else {
+            tabEntreprise = nullptr;
         }
     }
 
-    if (!roleCorrect) {
-        std::cout << "Rôle incorrect" << std::endl;
-        verif = false;
+    void suppTabEntreprise() {
+        delete[] tabEntreprise;
+        tabEntreprise = nullptr;
     }
 
-    // Vérifier le nom et l'ajouter si correct
-    bool nomCorrect = true;
-    for (int i = 0; i < tailleTab; ++i) {
-        if (!tabNom[i].empty() && nom == tabNom[i]) {
-            std::cout << "Nom incorrect" << std::endl;
-            nomCorrect = false;
-            verif = false;
-            break;
+    bool estDejaEntreprise(string& nom) {
+        for (int i = 0; i < tailleTab; ++i) {
+            if (nom == tabEntreprise[i].nomEntreprise) {
+                return true;
+            }
+         }
+        return false;
+    }
+
+    bool verifRole(string& role){
+        for (int i = 0; i < nbRole; ++i) {
+            if (role == roleTab[i]) {
+                return  true;
+                break;
+            }
+        }
+        return false;
+    }
+
+    void inscription(){
+        string role;
+        string nom;
+
+        cin >> role;
+        cin >> nom;
+
+        for (char& c : role) {
+            c = toupper(c);
+        }
+
+        Entreprise entrepriseTmp = *new Entreprise;
+
+        if (estDejaEntreprise(nom)){
+           cout << "Nom incorrect";
+            return;
+        }
+
+        if (!verifRole(role)) {
+            std::cout << "Rôle incorrect" << std::endl;
+            return;
+        }
+
+        for (int i = 0; i < tailleTab; ++i) {
+            if (tabEntreprise[i].nomEntreprise.empty()) {
+                tabEntreprise[i].idEntreprise = compteur++;
+                tabEntreprise[i].nomEntreprise = nom;
+                tabEntreprise[i].roleEntreprise = role;
+                std::cout << "Inscription realisee (" << compteur << ")" << std::endl;
+                return;
+            }
         }
     }
 
-    if (verif && nomCorrect) {
-        ajouterDansTabNom(nom);
-        ++compteur;
-        std::cout << "Inscription réalisée (" << compteur << ")" << std::endl;
-    }
-}
+
+
+
