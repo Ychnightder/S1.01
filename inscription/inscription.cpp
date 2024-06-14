@@ -6,7 +6,7 @@ const int nbRole = 3; // Nombre de rôles
 const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
     int tailleTab = 0;
-    Entreprise* tabEntreprise = nullptr; // Initialisation de la variable globale
+    Entreprise* tabEntreprise = nullptr;
     int compteur = 0;
 
     void initTabEntreprise(int taille) {

@@ -1,9 +1,14 @@
 # ninja log v6
 59	381	7400804360000000	CMakeFiles/S1_01.dir/exit/exit.cpp.obj	73b78592b5ace030
-50	486	7400804348600000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-66	511	7400804360000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
 20	495	7400810480500000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
-185	519	7400810500000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
-519	916	7400810500000000	S1_01.exe	f3f0d84ec94534de
 18	378	7400811843600000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
 379	780	7400811860000000	S1_01.exe	f3f0d84ec94534de
+13	475	7400840191600000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
+20	498	7400840200000000	CMakeFiles/S1_01.dir/inscription/inscription.cpp.obj	4e46a0abcfae5aa7
+29	500	7400840200000000	CMakeFiles/S1_01.dir/mission/mission.cpp.obj	d1eeb6f994ef966a
+500	916	7400840200000000	S1_01.exe	564bd74291da754b
+12	273	7400840925400000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
+274	703	7400840940000000	S1_01.exe	564bd74291da754b
+13	355	7400843462100000	CMakeFiles/S1_01.dir/main.cpp.obj	9f7bc501b6ab8368
+20	372	7400843480000000	CMakeFiles/S1_01.dir/mission/mission.cpp.obj	d1eeb6f994ef966a
+372	767	7400843480000000	S1_01.exe	564bd74291da754b
