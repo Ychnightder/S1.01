@@ -10,7 +10,7 @@
         }
         else{
             for (int i = 0; i < getCompteurMission(); ++i) {
-                cout << tabMission[i].idMission <<" "<< tabMission[i].nom<<" " <<tabMission[i].e->nomEntreprise<<" " <<"("<<ZERO<<")\n";
+                cout << tabMission[i].idMission <<" "<< tabMission[i].nom<<" " <<tabMission[i].e->nomEntreprise<<" " <<tabMission->prix <<" "<<"("<<ZERO<<")\n";
             }
         }
     }

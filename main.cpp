@@ -23,5 +23,5 @@ int main() {
     consultation();
 //
     supp();
-    return 0;
+    Exit();
 }
