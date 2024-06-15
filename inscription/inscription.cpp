@@ -7,7 +7,7 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
     int tailleTab = 0;
     Entreprise* tabEntreprise = nullptr;
-    int compteur = 0;
+    int compteurEntreprise = 0;
 
     void initTabEntreprise(int taille) {
         if (taille > 0) {
@@ -67,13 +67,17 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
         for (int i = 0; i < tailleTab; ++i) {
             if (tabEntreprise[i].nomEntreprise.empty()) {
-                tabEntreprise[i].idEntreprise = compteur++;
+                tabEntreprise[i].idEntreprise = compteurEntreprise++;
                 tabEntreprise[i].nomEntreprise = nom;
                 tabEntreprise[i].roleEntreprise = role;
-                std::cout << "Inscription realisee (" << compteur << ")" << std::endl;
+                std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
                 return;
             }
         }
+    }
+
+    Entreprise* dernierInscrit(){
+        return compteurEntreprise > 0 ? &tabEntreprise[compteurEntreprise - 1] : nullptr;
     }
 
 

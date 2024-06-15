@@ -17,12 +17,13 @@ using namespace std;
 
     extern int tailleTab;
     extern Entreprise* tabEntreprise;
-    extern int compteur;
+    extern int compteurEntreprise;
 
     void initTabEntreprise(int taille);
     void suppTabEntreprise();
     bool estDejaEntreprise(string& nom);
     bool verifRole(string& role);
+    Entreprise* dernierInscrit();
     void inscription();
 
 

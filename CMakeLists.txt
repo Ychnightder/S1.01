@@ -10,4 +10,6 @@ add_executable(S1_01
         inscription/inscription.h
         inscription/inscription.cpp
         mission/mission.h
-        mission/mission.cpp)
+        mission/mission.cpp
+        consultation/consultation.h
+        consultation/consultation.cpp)

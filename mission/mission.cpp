@@ -56,10 +56,14 @@
                 tabMission[i].idMission = id;
                 tabMission[i].nom = nom;
                 tabMission[i].prix = remuneration;
+                tabMission->e = dernierInscrit();
                 compteurM++;
                 cout << "Mission publiee (" << compteurM << ")"<<std::endl;
                 return;
             }
         }
 
+    }
+    int getCompteurMission(){
+    return compteurM;
     }
