@@ -5,19 +5,21 @@
 
 void init(){
     initTabEntreprise(100);
-    initTabEntreprise(100);
+    initTabMission(100);
 }
 void supp(){
     suppTabEntreprise();
-    suppTabEntreprise();
+    suppTabMission();
 }
 
 int main() {
     init();
-    inscription();
-    cout << "misssion";
+//    inscription();
     Mission();
-    inscription();
+    Mission();
+    Mission();
+
+//    inscription();
     supp();
     return 0;
 }

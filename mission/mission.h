@@ -18,5 +18,5 @@
     void initTabMission(int taille);
     void suppTabMission();
     bool estDejaMission(int& id);
-    void Mission();
+    void Mission( );
 #endif //S1_01_MISSION_H

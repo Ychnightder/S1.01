@@ -57,10 +57,9 @@
                 tabMission[i].nom = nom;
                 tabMission[i].prix = remuneration;
                 compteurM++;
-                std::cout << "Mission publiee (" << compteurM << ")" << std::endl;
+                cout << "Mission publiee (" << compteurM << ")"<<std::endl;
                 return;
             }
         }
-
 
     }
