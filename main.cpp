@@ -4,14 +4,17 @@
 #include "mission/mission.h"
 #include "consultation/consultation.h"
 #include "detail/detail.h"
+#include "acceptation/acceptation.h"
 
 void init(){
     initTabEntreprise(100);
     initTabMission(100);
+    initTabAttribue(100);
 }
 void supp(){
     suppTabEntreprise();
     suppTabMission();
+    suppTabAttribue();
 }
 
 int main() {

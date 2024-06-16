@@ -24,6 +24,7 @@ using namespace std;
     bool estDejaEntreprise(string& nom);
     bool verifRole(string& role);
     Entreprise* dernierInscrit();
+    int getCompteurEntrprise();
     void inscription();
 
 

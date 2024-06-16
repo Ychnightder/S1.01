@@ -16,4 +16,6 @@ add_executable(S1_01
         rapport/rapport.h
         rapport/rapport.cpp
         detail/detail.cpp
-        detail/detail.h)
+        detail/detail.h
+        acceptation/acceptation.h
+        acceptation/acceptation.cpp)

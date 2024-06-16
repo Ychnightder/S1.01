@@ -84,5 +84,7 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
     }
 
 
-
+    int getCompteurEntrprise(){
+        return compteurEntreprise;
+    }
 
