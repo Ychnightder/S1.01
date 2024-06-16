@@ -2,7 +2,7 @@
 #define S1_01_EXIT_H
 
 
- int Exit();
+void fin();
 
 
 #endif //S1_01_EXIT_H

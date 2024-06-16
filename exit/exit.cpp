@@ -1,5 +1,5 @@
 #include "exit.h"
 #include <cstdlib>
-int Exit () {
+void fin () {
     exit(0);
 }

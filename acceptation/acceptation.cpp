@@ -2,10 +2,14 @@
 #include "acceptation.h"
 #include "iostream"
     using namespace std;
+
+    Acceptation* tabAttribue = nullptr;
+    int tailleAttribue = 0;
     int comteurAc = 0;
+
     void initTabAttribue(int taille) {
         if (taille > 0) {
-            tailleAttribue = taille;
+            tailleAttribue = taille+1;
             tabAttribue = new Acceptation[taille];
         } else {
             tabAttribue = nullptr;
@@ -54,13 +58,13 @@
                 if (tabEntreprise[i].idEntreprise == entrepriseId) {
                     for (int j = 0; j < getCompteurMission(); ++j) {
                         if (tabMission[j].idMission == mission) {
-                            for (int k = 0; k < tailleAttribue; ++k) {
+                            for (int k = 1; k < tailleAttribue; ++k) {
                                 if (tabAttribue[k].idA.empty()) {
                                     tabAttribue[k].e = &tabEntreprise[i];
                                     tabAttribue[k].m = &tabMission[j];
-                                    comteurAc++; // Incrémente le compteur d'attributions
+                                    comteurAc++;
                                     cout << "Acceptation enregistree" << endl;
-                                    return; // Quitte la fonction après attribution
+                                    return;
                                 }
                             }
                         }
