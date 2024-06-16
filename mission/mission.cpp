@@ -58,7 +58,7 @@
                     tabMission[i].idMission = id;
                     tabMission[i].nom = nom;
                     tabMission[i].prix = remuneration;
-                    tabMission->e = dernierInscrit();
+                    tabMission->e = findEntreprise(id);
                     tabMission[i].soustraitance = 0;
                     compteurM++;
                     cout << "Mission publiee (" << compteurM << ")" << std::endl;
@@ -68,6 +68,8 @@
         }
 
     }
+
+
     int getCompteurMission(){
     return compteurM;
     }

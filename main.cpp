@@ -55,3 +55,5 @@ int main() {
 
 
 
+//S1_01.exe < in-sp1-base.txt > test.txt
+// fc /w out-sp1-base.txt test.txt

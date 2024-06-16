@@ -79,8 +79,13 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
         }
     }
 
-    Entreprise* dernierInscrit(){
-        return compteurEntreprise > 0 ? &tabEntreprise[compteurEntreprise - 1] : nullptr;
+    Entreprise* findEntreprise(int e){
+        for (int i = 0; i < compteurEntreprise; ++i) {
+            if (tabEntreprise[i].idEntreprise == e){
+                return &tabEntreprise[i];
+            }
+        }
+        return nullptr;
     }
 
 

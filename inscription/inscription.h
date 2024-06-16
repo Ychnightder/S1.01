@@ -23,7 +23,7 @@ using namespace std;
     void suppTabEntreprise();
     bool estDejaEntreprise(string& nom);
     bool verifRole(string& role);
-    Entreprise* dernierInscrit();
+    Entreprise* findEntreprise(int e);
     int getCompteurEntrprise();
     void inscription();
 
