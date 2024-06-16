@@ -11,9 +11,9 @@
 
 
 void init(){
-    initTabEntreprise(100);
-    initTabMission(100);
-    initTabAttribue(100);
+    initTabEntreprise(50);
+    initTabMission(500);
+    initTabAttribue(500);
 }
 void supp(){
     suppTabEntreprise();
@@ -39,6 +39,7 @@ int main() {
 //            {"Recapitulatif" , Recapitulatif},
 //            {"Sous-traitance" ,SousTraitance }
     };
+
     string operation;
     while (1){
         cin >> operation;

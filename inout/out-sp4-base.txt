@@ -1,0 +1,32 @@
+Inscription realisee (1)
+Inscription realisee (2)
+Inscription realisee (3)
+Mission publiee (1)
+1 Dupont Orange 30.50 (0)
+Acceptation enregistree
+Rapport enregistre (2)
+2 Dupont Orange 31.72 (0)
+Recepteur defectueux
+Sous-traitance enregistree (3)
+3 Dupont FiberAgency 28.40 (1)
+3 Dupont FiberAgency 28.40 (1)
+Recepteur defectueux
+* attribuees
+  2 Dupont Orange 31.72 (0)
+* terminees
+  1 Dupont Orange 30.50 (0)
+* non attribuees
+  3 Dupont FiberAgency 28.40 (1)
+* realisees
+  1 Dupont Orange 30.50 (0)
+Inscription realisee (4)
+Acceptation enregistree
+Rapport enregistre
+Aucune mission disponible
+* terminees
+  1 Dupont Orange 30.50 (0)
+  2 Dupont Orange 31.72 (0)
+* terminees
+  3 Dupont FiberAgency 28.40 (1)
+* realisees
+  3 Dupont FiberAgency 28.40 (1)

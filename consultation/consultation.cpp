@@ -1,5 +1,4 @@
 #include "consultation.h"
-
 #include "iostream"
 
     void consultation(){
@@ -8,7 +7,9 @@
         }
         else{
             for (int i = 0; i < getCompteurMission(); ++i) {
+                if (tabMission[i].idMission != -1) {
                 cout << tabMission[i].idMission <<" "<< tabMission[i].nom<<" " <<tabMission[i].e->nomEntreprise<<" " <<tabMission->prix <<" "<<"("<<tabMission->soustraitance<<")\n";
+                }
             }
         }
     }

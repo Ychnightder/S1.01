@@ -62,6 +62,9 @@
                                 if (tabAttribue[k].idA.empty()) {
                                     tabAttribue[k].e = &tabEntreprise[i];
                                     tabAttribue[k].m = &tabMission[j];
+                                    tabMission[j].idMission = -1;
+                                    tabMission[j].nom = "";
+                                    tabMission[j].prix = 0;
                                     comteurAc++;
                                     cout << "Acceptation enregistree" << endl;
                                     return;

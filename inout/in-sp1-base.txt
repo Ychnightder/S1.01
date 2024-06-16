@@ -1,0 +1,17 @@
+inscription OP OperateurUn
+inscription OP OperateurDeux
+inscription AG AgenceUne
+inscription AG AgenceDeux
+inscription IN IntervenantUn
+mission 2 Mission1 5.00
+mission 1 Mission2 10.00
+consultation
+acceptation 3 1
+mission 1 Mission3 100.00
+acceptation 5 2
+consultation
+inscription IN IntervenantDeux
+inscription IN IntervenantTrois
+acceptation 7 3
+consultation
+exit

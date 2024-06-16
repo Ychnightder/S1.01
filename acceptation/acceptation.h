@@ -15,6 +15,7 @@
     extern int tailleAttribue;
     extern int comteurAc;
 
+
     void acceptation();
     void initTabAttribue(int taille);
     void suppTabAttribue();
