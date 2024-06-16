@@ -3,6 +3,7 @@
 #include "inscription/inscription.h"
 #include "mission/mission.h"
 #include "consultation/consultation.h"
+#include "detail/detail.h"
 
 void init(){
     initTabEntreprise(100);
@@ -14,7 +15,8 @@ void supp(){
 }
 
 int main() {
-//    op orange 25 dupont 25.1
+//    op orange
+//    25 dupont 25.1
     init();
 //    inscription();
     inscription();
@@ -22,6 +24,10 @@ int main() {
 //    Mission();
     consultation();
 //
+    Rapport();
+
+    detail();
+
     supp();
     Exit();
 }

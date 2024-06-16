@@ -33,7 +33,7 @@
         int id;
         string nom;
         double remuneration;
-
+        bool  verifmission = true;
         cin >> id;
         cin >> nom;
         cin >> remuneration;
@@ -42,24 +42,28 @@
 
         if(estDejaMission(id)){
             cout << "Identifiant incorrect" <<std::endl ;
+            verifmission = false;
             return;
         }
 
         if (remuneration <= 0){
             cout << "Remuneration incorrecte" <<std::endl;
+            verifmission = false;
             return;
         }
 
-
-        for (int i = 0; i < tailleTabM; ++i) {
-            if (tabMission[i].nom.empty()) {
-                tabMission[i].idMission = id;
-                tabMission[i].nom = nom;
-                tabMission[i].prix = remuneration;
-                tabMission->e = dernierInscrit();
-                compteurM++;
-                cout << "Mission publiee (" << compteurM << ")"<<std::endl;
-                return;
+        if (verifmission) {
+            for (int i = 0; i < tailleTabM; ++i) {
+                if (tabMission[i].nom.empty()) {
+                    tabMission[i].idMission = id;
+                    tabMission[i].nom = nom;
+                    tabMission[i].prix = remuneration;
+                    tabMission->e = dernierInscrit();
+                    tabMission[i].soustraitance = 0;
+                    compteurM++;
+                    cout << "Mission publiee (" << compteurM << ")" << std::endl;
+                    return;
+                }
             }
         }
 

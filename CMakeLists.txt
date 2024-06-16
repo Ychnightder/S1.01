@@ -12,4 +12,8 @@ add_executable(S1_01
         mission/mission.h
         mission/mission.cpp
         consultation/consultation.h
-        consultation/consultation.cpp)
+        consultation/consultation.cpp
+        rapport/rapport.h
+        rapport/rapport.cpp
+        detail/detail.cpp
+        detail/detail.h)

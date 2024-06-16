@@ -5,8 +5,7 @@
 
     using namespace std;
 
-    extern const int ZERO;
-    extern int compteurSst;
+
 
 
 

@@ -45,7 +45,7 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
     void inscription(){
         string role;
         string nom;
-
+        bool  verifInscrit = true;
         cin >> role;
         cin >> nom;
 
@@ -57,21 +57,24 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
         if (estDejaEntreprise(nom)){
            cout << "Nom incorrect";
+            verifInscrit = false;
             return;
         }
 
         if (!verifRole(role)) {
             std::cout << "Rôle incorrect" << std::endl;
+            verifInscrit = false;
             return;
         }
-
-        for (int i = 0; i < tailleTab; ++i) {
-            if (tabEntreprise[i].nomEntreprise.empty()) {
-                tabEntreprise[i].idEntreprise = compteurEntreprise++;
-                tabEntreprise[i].nomEntreprise = nom;
-                tabEntreprise[i].roleEntreprise = role;
-                std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
-                return;
+        if (verifInscrit) {
+            for (int i = 0; i < tailleTab; ++i) {
+                if (tabEntreprise[i].nomEntreprise.empty()) {
+                    tabEntreprise[i].idEntreprise = compteurEntreprise++;
+                    tabEntreprise[i].nomEntreprise = nom;
+                    tabEntreprise[i].roleEntreprise = role;
+                    std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
+                    return;
+                }
             }
         }
     }

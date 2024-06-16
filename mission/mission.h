@@ -3,6 +3,7 @@
 #define S1_01_MISSION_H
 #include <string>
 #include "../inscription/inscription.h"
+#include "../rapport/rapport.h"
 
 using  namespace std;
 
@@ -11,8 +12,9 @@ using  namespace std;
         string nom;
         double prix;
         Entreprise* e;
+        int soustraitance;
+        rapport rapport;
     };
-
     extern int tailleTabM;
     extern mission* tabMission;
     extern int compteurM;
