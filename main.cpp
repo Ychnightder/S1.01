@@ -37,7 +37,10 @@ int main() {
             {"exit", fin},
             {"rapport" , Rapport},
 //            {"Recapitulatif" , Recapitulatif},
-//            {"Sous-traitance" ,SousTraitance }
+//            {"Sous-traitance" ,SousTraitance },
+            {"affichageEntreprise", affichageEntreprise},
+            {"affichageMission", affichageMission}
+
     };
 
     string operation;

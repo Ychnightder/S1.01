@@ -69,7 +69,11 @@
 
     }
 
-
+    void affichageMission(){
+        for (int i = 0; i < getCompteurMission(); ++i) {
+            cout << tabMission[i].idMission << " " <<  tabMission[i].nom << " " << tabMission[i].prix <<" "<< tabMission[i].e << std::endl;
+        }
+    }
     int getCompteurMission(){
     return compteurM;
     }

@@ -26,6 +26,7 @@ using namespace std;
     Entreprise* findEntreprise(int e);
     int getCompteurEntrprise();
     void inscription();
+    void affichageEntreprise();
 
 
 #endif //S1_01_INSCRIPTION_H

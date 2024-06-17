@@ -25,4 +25,5 @@ using  namespace std;
     bool estDejaMission(int& id);
     void Mission();
     int getCompteurMission();
+    void affichageMission();
 #endif //S1_01_MISSION_H

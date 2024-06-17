@@ -7,7 +7,7 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
     int tailleTab = 0;
     Entreprise* tabEntreprise = nullptr;
-    int compteurEntreprise = 0;
+    int compteurEntreprise = 1;
 
     void initTabEntreprise(int taille) {
         if (taille > 0) {
@@ -53,7 +53,6 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
             c = toupper(c);
         }
 
-        Entreprise entrepriseTmp = *new Entreprise;
 
         if (estDejaEntreprise(nom)){
            cout << "Nom incorrect";
@@ -69,10 +68,11 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
         if (verifInscrit) {
             for (int i = 0; i < tailleTab; ++i) {
                 if (tabEntreprise[i].nomEntreprise.empty()) {
-                    tabEntreprise[i].idEntreprise = compteurEntreprise++;
+                    tabEntreprise[i].idEntreprise = compteurEntreprise;
                     tabEntreprise[i].nomEntreprise = nom;
                     tabEntreprise[i].roleEntreprise = role;
                     std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
+                    compteurEntreprise++;
                     return;
                 }
             }
@@ -88,7 +88,11 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
         return nullptr;
     }
 
-
+    void affichageEntreprise(){
+        for (int i = 0; i < compteurEntreprise; ++i) {
+            cout << tabEntreprise[i].idEntreprise<< " " << tabEntreprise[i].roleEntreprise<< " " <<tabEntreprise[i].nomEntreprise << "\n";
+        }
+    }
     int getCompteurEntrprise(){
         return compteurEntreprise;
     }
