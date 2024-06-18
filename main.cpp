@@ -11,9 +11,9 @@
 
 
 void init(){
-    initTabEntreprise(50);
-    initTabMission(500);
-    initTabAttribue(500);
+    initTabEntreprise();
+    initTabMission();
+    initTabAttribue();
 }
 void supp(){
     suppTabEntreprise();
@@ -38,8 +38,8 @@ int main() {
             {"rapport" , Rapport},
 //            {"Recapitulatif" , Recapitulatif},
 //            {"Sous-traitance" ,SousTraitance },
-            {"affichageEntreprise", affichageEntreprise},
-            {"affichageMission", affichageMission}
+            {"affichageE", affichageEntreprise},
+            {"affichageM", affichageMission}
 
     };
 
@@ -60,3 +60,17 @@ int main() {
 
 //S1_01.exe < in-sp1-base.txt > test.txt
 // fc /w out-sp1-base.txt test.txt
+
+//inscription OP OperateurUn
+//        inscription OP OperateurDeux
+//inscription AG AgenceUne
+//        inscription AG AgenceDeux
+//inscription IN IntervenantUn
+//        mission 2 Mission1 5.00
+//mission 1 Mission2 10.00
+
+
+//inscription op orange
+//inscription in vert
+//inscription ag rouge
+//mission 1 m1 25.55

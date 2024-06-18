@@ -15,18 +15,20 @@ using namespace std;
     extern const char* roleTab[];
 
 
-    extern int tailleTab;
+    extern const int tailleTab;
     extern Entreprise* tabEntreprise;
     extern int compteurEntreprise;
 
     void initTabEntreprise(int taille);
+    void initTabEntreprise();
     void suppTabEntreprise();
     bool estDejaEntreprise(string& nom);
     bool verifRole(string& role);
-    Entreprise* findEntreprise(int e);
     int getCompteurEntrprise();
     void inscription();
     void affichageEntreprise();
+    bool verifOperateurId(int id);
+    string NomEntreprisePourMission(int id);
 
 
 #endif //S1_01_INSCRIPTION_H

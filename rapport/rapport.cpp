@@ -19,7 +19,7 @@ using namespace  std;
         cin >> codeRapport;
 
         for (int i = 0; i < getCompteurMission(); ++i) {
-            if (idMission != tabMission[i].idMission){
+            if (idMission != tabMissionNonAttribue[i].idMission){
                 cout << "Mission incorrecte ";
                 verifrapport = false;
                 break;
@@ -34,7 +34,7 @@ using namespace  std;
         if (verifrapport){
 
             for (int i = 0; i < getCompteurMission(); ++i) {
-                if (tabMission[i].idMission == idMission){
+                if (tabMissionNonAttribue[i].idMission == idMission){
                     rapport rapporGenerale = *new rapport;
 
                     switch (codeRapport) {
@@ -57,7 +57,7 @@ using namespace  std;
                             rapporGenerale.majoration = 0.4;
                             break;
                     }
-                    tabMission[i].rapport =rapporGenerale;
+                    tabMissionNonAttribue[i].rapport =rapporGenerale;
                     break;
                 }
             }

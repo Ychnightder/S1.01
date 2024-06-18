@@ -9,20 +9,20 @@ using  namespace std;
 
     struct mission{
         int idMission;
+        string nomEntreprise;
         string nom;
         double prix;
-        Entreprise* e;
         int soustraitance;
         rapport rapport;
     };
+
     extern int tailleTabM;
-    extern mission* tabMission;
+    extern mission* tabMissionNonAttribue;
     extern int compteurM;
 
 
-    void initTabMission(int taille);
+    void initTabMission();
     void suppTabMission();
-    bool estDejaMission(int& id);
     void Mission();
     int getCompteurMission();
     void affichageMission();

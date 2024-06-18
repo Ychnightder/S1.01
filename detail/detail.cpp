@@ -7,9 +7,9 @@ using namespace std;
         cin >> idMission;
 
         for (int i = 0; i <getCompteurMission() ; ++i) {
-            if (tabMission[i].idMission == idMission){
-                cout << tabMission[i].idMission <<" "<< tabMission[i].nom<<" " <<tabMission[i].e->nomEntreprise<<" " <<tabMission->prix <<" "<<"("<<tabMission->soustraitance<<")\n";
-                cout << tabMission[i].rapport.detail;
+            if (tabMissionNonAttribue[i].idMission == idMission){
+                cout << tabMissionNonAttribue[i].idMission << " " << tabMissionNonAttribue[i].nom << " " << tabMissionNonAttribue[i].nomEntreprise << " " << tabMissionNonAttribue->prix << " " << "(" << tabMissionNonAttribue->soustraitance << ")\n";
+                cout << tabMissionNonAttribue[i].rapport.detail;
                 break;
             }
             else{

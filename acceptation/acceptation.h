@@ -11,13 +11,14 @@
             Entreprise* e;
             mission* m;
     };
+
     extern Acceptation* tabAttribue;
-    extern int tailleAttribue;
+    extern const int tailleAttribue;
     extern int comteurAc;
 
 
     void acceptation();
-    void initTabAttribue(int taille);
+    void initTabAttribue();
     void suppTabAttribue();
     int getCompteurAttribue();
 

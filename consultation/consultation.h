@@ -5,9 +5,5 @@
 
     using namespace std;
 
-
-
-
-
     void consultation();
 #endif //S1_01_CONSULTATION_H

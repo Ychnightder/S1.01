@@ -2,21 +2,18 @@
 #include <cctype>
 #include "inscription.h"
 
-const int nbRole = 3; // Nombre de rôles
-const char* roleTab[nbRole] = {"AG", "OP", "IN"};
+    const int nbRole = 3; // Nombre de rôles
+    const char* roleTab[nbRole] = {"AG", "OP", "IN"};
 
-    int tailleTab = 0;
+    const int tailleTab = 50;
     Entreprise* tabEntreprise = nullptr;
-    int compteurEntreprise = 1;
+    int compteurEntreprise = 0;
 
-    void initTabEntreprise(int taille) {
-        if (taille > 0) {
-            tailleTab = taille;
-            tabEntreprise = new Entreprise[taille];
-        } else {
-            tabEntreprise = nullptr;
-        }
+
+    void initTabEntreprise() {
+        tabEntreprise = new Entreprise[tailleTab];
     }
+
 
     void suppTabEntreprise() {
         delete[] tabEntreprise;
@@ -65,34 +62,47 @@ const char* roleTab[nbRole] = {"AG", "OP", "IN"};
             verifInscrit = false;
             return;
         }
+
         if (verifInscrit) {
             for (int i = 0; i < tailleTab; ++i) {
                 if (tabEntreprise[i].nomEntreprise.empty()) {
-                    tabEntreprise[i].idEntreprise = compteurEntreprise;
+                    tabEntreprise[i].idEntreprise = compteurEntreprise + 1;
                     tabEntreprise[i].nomEntreprise = nom;
                     tabEntreprise[i].roleEntreprise = role;
-                    std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
                     compteurEntreprise++;
+                    std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
                     return;
                 }
             }
         }
     }
 
-    Entreprise* findEntreprise(int e){
-        for (int i = 0; i < compteurEntreprise; ++i) {
-            if (tabEntreprise[i].idEntreprise == e){
-                return &tabEntreprise[i];
-            }
-        }
-        return nullptr;
-    }
+
 
     void affichageEntreprise(){
         for (int i = 0; i < compteurEntreprise; ++i) {
             cout << tabEntreprise[i].idEntreprise<< " " << tabEntreprise[i].roleEntreprise<< " " <<tabEntreprise[i].nomEntreprise << "\n";
         }
     }
+
+    bool verifOperateurId(int id){
+        for (int i = 0; i < compteurEntreprise; ++i) {
+            if (tabEntreprise[i].idEntreprise == id && tabEntreprise->roleEntreprise == "OP"){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    string NomEntreprisePourMission(int id){
+        for (int i = 0; i < compteurEntreprise; ++i) {
+            if (tabEntreprise[i].idEntreprise == id && tabEntreprise->roleEntreprise == "OP"){
+                return tabEntreprise[i].nomEntreprise;
+            }
+        }
+        return "x";
+    }
+
     int getCompteurEntrprise(){
         return compteurEntreprise;
     }

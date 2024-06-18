@@ -4,26 +4,23 @@
     using namespace std;
 
     Acceptation* tabAttribue = nullptr;
-    int tailleAttribue = 0;
+    const int tailleAttribue = 500;
     int comteurAc = 0;
 
-    void initTabAttribue(int taille) {
-        if (taille > 0) {
-            tailleAttribue = taille+1;
-            tabAttribue = new Acceptation[taille];
-        } else {
-            tabAttribue = nullptr;
-        }
+    void initTabAttribue() {
+            tabAttribue = new Acceptation[tailleAttribue];
     }
 
     void suppTabAttribue(){
         delete[] tabAttribue;
         tabAttribue = nullptr;
     }
+
     void acceptation(){
         int entrepriseId;
         int mission;
         bool verifA = true;
+
         cin >> entrepriseId;
         cin >> mission;
 
@@ -42,7 +39,7 @@
 
         bool missionCorrecte = false;
         for (int i = 0; i < getCompteurMission(); ++i) {
-            if (tabMission[i].idMission == mission) {
+            if (tabMissionNonAttribue[i].idMission == mission) {
                 missionCorrecte = true;
                 break;
             }
@@ -57,14 +54,17 @@
             for (int i = 0; i < getCompteurEntrprise(); ++i) {
                 if (tabEntreprise[i].idEntreprise == entrepriseId) {
                     for (int j = 0; j < getCompteurMission(); ++j) {
-                        if (tabMission[j].idMission == mission) {
+                        if (tabMissionNonAttribue[j].idMission == mission) {
                             for (int k = 1; k < tailleAttribue; ++k) {
                                 if (tabAttribue[k].idA.empty()) {
+
                                     tabAttribue[k].e = &tabEntreprise[i];
-                                    tabAttribue[k].m = &tabMission[j];
-                                    tabMission[j].idMission = -1;
-                                    tabMission[j].nom = "";
-                                    tabMission[j].prix = 0;
+                                    tabAttribue[k].m = &tabMissionNonAttribue[j];
+
+                                    tabMissionNonAttribue[j].idMission = -1;
+                                    tabMissionNonAttribue[j].nom = "";
+                                    tabMissionNonAttribue[j].prix = 0.0;
+
                                     comteurAc++;
                                     cout << "Acceptation enregistree" << endl;
                                     return;

@@ -1,15 +1,29 @@
 #include "consultation.h"
 #include "iostream"
+#include <iomanip>
+
 
     void consultation(){
-        if (getCompteurMission() == 0 || tabMission == nullptr){
-            cout << "Aucune mission disponible";
+        bool missionsNonAttribueesDisponibles = false;
+        // Vérifier s'il y a au moins une mission non attribuée
+        for (int i = 0; i < compteurM; ++i) {
+            if (tabMissionNonAttribue[i].idMission > 0) {
+                missionsNonAttribueesDisponibles = true;
+                break;
+            }
         }
-        else{
-            for (int i = 0; i < getCompteurMission(); ++i) {
-                if (tabMission[i].idMission != -1) {
-                cout << tabMission[i].idMission <<" "<< tabMission[i].nom<<" " <<tabMission[i].e->nomEntreprise<<" " <<tabMission->prix <<" "<<"("<<tabMission->soustraitance<<")\n";
+        if (missionsNonAttribueesDisponibles) {
+            for (int i = 0; i < compteurM; ++i) {
+                if (tabMissionNonAttribue[i].idMission > 0) {
+                    cout << tabMissionNonAttribue[i].idMission << " "
+                         << tabMissionNonAttribue[i].nom << " "
+                         << tabMissionNonAttribue[i].nomEntreprise << " "
+                         << fixed << setprecision(2) << tabMissionNonAttribue[i].prix << " ("
+                         << tabMissionNonAttribue[i].soustraitance << ")" << endl;
                 }
             }
+        }
+        else {
+            cout << "Aucune mission disponible" << endl;
         }
     }
