@@ -1,0 +1,28 @@
+inscription IP Erreur
+inscription OP OperateurUn
+inscription OP OperateurDeux
+inscription AG OperateurUn
+inscription AG AgenceUne
+inscription AG AgenceDeux
+inscription IN IntervenantUn
+mission 0 MissionErreur 5.00
+mission 3 MissionErreur 5.00
+mission 6 MissionErreur 5.00
+mission 2 MissionErreur -5.00
+mission 2 Mission1 5.00
+mission 1 Mission2 10.00
+consultation
+acceptation 3 0
+acceptation 3 3
+acceptation 1 1
+acceptation 3 1
+acceptation 3 1
+acceptation 4 1
+mission 1 Mission3 100.00
+acceptation 5 2
+consultation
+inscription IN IntervenantDeux
+inscription IN IntervenantTrois
+acceptation 7 3
+consultation
+exit

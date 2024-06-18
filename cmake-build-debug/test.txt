@@ -1,0 +1,34 @@
+Role incorrect
+
+Inscription realisee (1)
+Inscription realisee (2)
+Nom incorrect
+Inscription realisee (3)
+Inscription realisee (4)
+Inscription realisee (5)
+Entreprise incorrecte
+Mission publiee (1)
+Entreprise incorrecte
+Remuneration incorrecte
+Mission publiee (2)
+Mission publiee (3)
+Mission publiee (4)
+1 MissionErreur AgenceUne 5.00 (0)
+2 MissionErreur OperateurDeux -5.00 (0)
+3 Mission1 OperateurDeux 5.00 (0)
+4 Mission2 OperateurUn 10.00 (0)
+Mission incorrecte
+Acceptation enregistree
+Entreprise incorrecte
+Acceptation enregistree
+Mission incorrecte
+Mission incorrecte
+Mission publiee (5)
+Acceptation enregistree
+5 Mission3 OperateurUn 100.00 (0)
+4 Mission2 OperateurUn 10.00 (0)
+Inscription realisee (6)
+Inscription realisee (7)
+Mission incorrecte
+5 Mission3 OperateurUn 100.00 (0)
+4 Mission2 OperateurUn 10.00 (0)
