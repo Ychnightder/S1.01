@@ -52,13 +52,13 @@
 
 
         if (estDejaEntreprise(nom)){
-           cout << "Nom incorrect";
+           cout << "Nom incorrect"<< std::endl;
             verifInscrit = false;
             return;
         }
 
         if (!verifRole(role)) {
-            std::cout << "Rôle incorrect" << std::endl;
+            std::cout << "Role incorrect" << std::endl;
             verifInscrit = false;
             return;
         }

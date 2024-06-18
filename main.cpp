@@ -58,16 +58,9 @@ int main() {
 
 
 
-//S1_01.exe < in-sp1-base.txt > test.txt
-// fc /w out-sp1-base.txt test.txt
+//S1_01.exe < in-sp1-erreur.txt > test.txt
+// fc /w out-sp1-erreur.txt test.txt
 
-//inscription OP OperateurUn
-//        inscription OP OperateurDeux
-//inscription AG AgenceUne
-//        inscription AG AgenceDeux
-//inscription IN IntervenantUn
-//        mission 2 Mission1 5.00
-//mission 1 Mission2 10.00
 
 
 //inscription op orange
