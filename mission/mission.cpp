@@ -29,12 +29,12 @@
         cin >> remuneration;
 
         if(!verifOperateurId(idEntreprise)){
-            cout << "Entreprise incorrecte" <<endl;
+            cout << "Identifiant incorrect" <<endl;
             verifmission = false;
             return;
-        }else if (remuneration <= 0){
+        }else if (remuneration < 0){
             cout << "Remuneration incorrecte" <<endl;
-
+            verifmission = false;
         }
 
         if (verifmission) {
@@ -50,6 +50,7 @@
                 }
             }
         }
+        return;
     }
 
     void affichageMission(){

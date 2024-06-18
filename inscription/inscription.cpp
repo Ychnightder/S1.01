@@ -52,15 +52,12 @@
 
 
         if (estDejaEntreprise(nom)){
-           cout << "Nom incorrect"<< std::endl;
+           cout << "Nom incorrect"<< endl;
             verifInscrit = false;
-            return;
         }
-
-        if (!verifRole(role)) {
-            std::cout << "Role incorrect" << std::endl;
+        else if (!verifRole(role)) {
+            cout << "Role incorrect" << endl;
             verifInscrit = false;
-            return;
         }
 
         if (verifInscrit) {
@@ -71,10 +68,11 @@
                     tabEntreprise[i].roleEntreprise = role;
                     compteurEntreprise++;
                     std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
-                    return;
+                    break;
                 }
             }
         }
+        return;
     }
 
 
@@ -87,7 +85,7 @@
 
     bool verifOperateurId(int id){
         for (int i = 0; i < compteurEntreprise; ++i) {
-            if (tabEntreprise[i].idEntreprise == id && tabEntreprise->roleEntreprise == "OP"){
+            if (tabEntreprise[i].idEntreprise == id && tabEntreprise[i].roleEntreprise == "OP"){
                 return true;
             }
         }
