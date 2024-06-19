@@ -71,8 +71,8 @@
 ////                        case TROIS:
 ////                            tabAttribue[i].m->detail = getDetail(codeRapport);
 ////                            tabAttribue[i].m->idMission = compteurM + 1;
-////                            tabAttribue[i].m->prix = majorerMission(tabAttribue[i].m->prix, codeRapport);
-////                            RepublierMission(tabAttribue[i].m->idAncienMission, tabAttribue[i].m->nom, tabAttribue[i].m->prix);
+////                            tabAttribue[i].m->remuneration = majorerMission(tabAttribue[i].m->remuneration, codeRapport);
+////                            RepublierMission(tabAttribue[i].m->idAncienMission, tabAttribue[i].m->nomMission, tabAttribue[i].m->remuneration);
 ////                            cout << "Rapport enregistre (" << compteurM << ")" << endl;
 ////                            tabAttribue[i].m = nullptr;
 ////                            tabAttribue[i].e = nullptr;
@@ -113,8 +113,8 @@
 //                        compteurM++;
 //                        tabAttribue[i].m->idMission = tabAttribue[i].m->idAncienMission;
 ////                        tabAttribue[i].m->nomEntreprise = tabAttribue[i].e->nomEntreprise;
-//                        tabAttribue[i].m->prix = majorerMission(tabAttribue[i].m->prix , codeRapport);
-//                        RepublierMission(tabAttribue[i].m->idMission ,tabAttribue[i].m->nom,tabAttribue[i].m->prix );
+//                        tabAttribue[i].m->remuneration = majorerMission(tabAttribue[i].m->remuneration , codeRapport);
+//                        RepublierMission(tabAttribue[i].m->idMission ,tabAttribue[i].m->nomMission,tabAttribue[i].m->remuneration );
 //                        cout << "Rapport enregistre ("<< compteurM <<")"<< endl;
 //                        tabAttribue[i].m = nullptr;
 //                        tabAttribue[i].e = nullptr;

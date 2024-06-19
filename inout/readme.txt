@@ -8,7 +8,7 @@ Vous pouvez copier une à une les commandes de in-xxx.txt pour les coller une à
 
 Vous pouvez aussi éviter tout copier/coller en redirigeant l'entrée de votre programme. Cela peut se faire facilement à partir d'une invite de commande (ou d'un terminal).
 
-Sous windows, le fichier exécutable résultant de la compilation porte le nom du projet suivi de .exe. Sous Visual Studio, il se trouve dans le répertoire Debug de la "solution" contenant le projet.
+Sous windows, le fichier exécutable résultant de la compilation porte le nomMission du projet suivi de .exe. Sous Visual Studio, il se trouve dans le répertoire Debug de la "solution" contenant le projet.
 
 Vous devez copier les fichiers in-xxx.txt et out-xxx.txt dans le répertoire contenant ce fichier exécutable. Lancez ensuite une invite de commande dans ce même répertoire et taper les commandes suivantes. On fait l'hyptothèse que votre projet est nommé s1-01 et donc que l'exécutable est s1-01.exe.
 

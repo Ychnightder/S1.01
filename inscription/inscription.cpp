@@ -62,8 +62,6 @@
         return;
     }
 
-
-
     void affichageEntreprise(){
         for (auto item = tabEntreprise.begin(); item != tabEntreprise.end(); item++ ) {
             cout << item->first << " " << item->second.nomEntreprise << " " << item->second.roleEntreprise << endl;
