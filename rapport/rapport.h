@@ -29,6 +29,7 @@ using namespace std;
     double getMajoration(int cr);
     void Rapport();
     bool verifiCode(int c);
+    bool verifiMissio(int id);
     double majorerMission(double prixMission , double codeR);
 
 

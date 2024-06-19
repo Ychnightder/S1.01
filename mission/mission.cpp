@@ -7,7 +7,6 @@
      map<int,mission> tabMissionNonAttribue;
 
     void Mission(){
-
         int idEntrepriseChoisie;
         string nomMission;
         double remuneration;
@@ -36,6 +35,7 @@
         }
         return;
     }
+
 
 
     void affichageMission() {

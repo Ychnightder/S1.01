@@ -2,7 +2,6 @@
 #include "acceptation.h"
 #include "iostream"
 
-#include "iomanip"
     using namespace std;
     map<int,mission> tabAttribue;
     int compteurAc = 1;

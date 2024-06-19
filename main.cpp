@@ -3,14 +3,13 @@
 #include "inscription/inscription.h"
 #include "mission/mission.h"
 #include "consultation/consultation.h"
-//#include "detail/detail.h"
+#include "detail/detail.h"
 #include "acceptation/acceptation.h"
 #include "string"
+#include "rapport/rapport.h"
 
 
-
-
-    struct Command{
+struct Command{
         string command;
         void (*functionCommand)();
     };
@@ -21,9 +20,9 @@ int main() {
             {"mission", Mission},         // Command 2
             {"consultation", consultation},
             {"acceptation", acceptation },
-//            {"detail", detail},
+            {"detail", detail},
             {"exit", fin},
-//            {"r" , Rapport},
+            {"r" , Rapport},
 //           {"Recapitulatif" , Recapitulatif},
 //            {"Sous-traitance" ,SousTraitance },
             {"afficherE", affichageEntreprise},
@@ -60,4 +59,5 @@ int main() {
 //inscription ag rouge
 //mission 1 m1 25.55
 //acceptation 2 1
+//r 1 3
 //affichageA

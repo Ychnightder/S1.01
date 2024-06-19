@@ -1,22 +1,24 @@
-//#include "iostream"
-//#include "detail.h"
-//#include "iomanip"
-//using namespace std;
-//
-//    void detail(){
-//        int idMission;
-//        cin >> idMission;
-//
-//        for (int i = 0; i < compteurM ; ++i) {
-//            if (tabMissionNonAttribue[i].idMission == idMission){
-//                cout << tabMissionNonAttribue[i].idMission << " " << tabMissionNonAttribue[i].nomMission << " " << tabMissionNonAttribue[i].nomEntreprise << " " << fixed << setprecision(2) << tabMissionNonAttribue[i].remuneration << " " << "(" << tabMissionNonAttribue[i].soustraitance << ")\n";
-//                cout << tabMissionNonAttribue[i].detail;
-//                break;
-//            }
-//            else{
-//                cout << "Identifiant incorrect dtl.ccp" << endl;
-//                break;
-//            }
-//        }
-//
-//    }
+#include "iostream"
+#include "detail.h"
+#include "iomanip"
+using namespace std;
+
+    void detail(){
+        int idMission;
+        cin >> idMission;
+
+        auto it = tabMissionNonAttribue.find(idMission);
+        if (it != tabMissionNonAttribue.end()) {
+            const mission& mission = it->second;
+            cout << mission.idMission << " "
+                 << mission.nomMissions << " "
+                 << mission.entreprisePublie.nomEntreprise << " "
+                 << fixed << setprecision(2) << mission.remunerations << " ("
+                 << mission.soustraitances << ")\n"
+                 << mission.detail << endl;
+        } else {
+            cout << "Identifiant incorrect" << endl;
+        }
+
+    }
+
