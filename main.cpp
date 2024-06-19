@@ -1,25 +1,14 @@
 #include "iostream"
 #include "exit/exit.h"
 #include "inscription/inscription.h"
-#include "mission/mission.h"
-#include "consultation/consultation.h"
-#include "detail/detail.h"
-#include "acceptation/acceptation.h"
+//#include "mission/mission.h"
+//#include "consultation/consultation.h"
+//#include "detail/detail.h"
+//#include "acceptation/acceptation.h"
 #include "string"
 
 
 
-
-void init(){
-    initTabEntreprise();
-    initTabMission();
-    initTabAttribue();
-}
-void supp(){
-    suppTabEntreprise();
-    suppTabMission();
-    suppTabAttribue();
-}
 
     struct Command{
         string command;
@@ -27,21 +16,19 @@ void supp(){
     };
 
 int main() {
-    init();
     Command commands[] = {
             {"inscription", inscription}, // Command 1
-            {"mission", Mission},         // Command 2
-            {"consultation", consultation},
-            {"acceptation", acceptation },
-            {"detail", detail},
-            {"exit", fin},
-            {"r" , Rapport},
-//            {"Recapitulatif" , Recapitulatif},
+//            {"mission", Mission},         // Command 2
+//            {"consultation", consultation},
+//            {"acceptation", acceptation },
+//            {"detail", detail},
+//            {"exit", fin},
+//            {"r" , Rapport},
+//           {"Recapitulatif" , Recapitulatif},
 //            {"Sous-traitance" ,SousTraitance },
-            {"affichageE", affichageEntreprise},
-            {"affichageM", affichageMission},
-            {"affichageA", affichageAttribue}
-
+            {"afficherE", affichageEntreprise},
+//            {"affichageM", affichageMission},
+//            {"affichageA", affichageAttribue}
 
     };
 
@@ -54,7 +41,6 @@ int main() {
             }
         }
     }
-    supp();
     fin();
 }
 

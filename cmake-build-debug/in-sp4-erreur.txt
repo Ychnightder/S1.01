@@ -1,0 +1,21 @@
+inscription OP Operateur
+inscription AG Agence1
+inscription AG Agence2
+inscription IN Intervenant
+mission 1 Dupont 30.50
+sous-traitance 2 1 0.0
+sous-traitance 2 1 -10.0
+sous-traitance 0 1 10.0
+sous-traitance 1 1 10.0
+sous-traitance 4 1 10.0
+sous-traitance 5 1 10.0
+sous-traitance 2 0 10.0
+sous-traitance 2 2 10.0
+sous-traitance 2 1 10.0
+sous-traitance 3 2 10.0
+sous-traitance 2 3 10.0
+sous-traitance 3 4 10.0
+sous-traitance 2 5 10.0
+sous-traitance 3 6 10.0
+consultation
+exit
