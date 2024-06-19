@@ -98,10 +98,8 @@
                 return tabEntreprise[i].nomEntreprise;
             }
         }
-        return "x";
+        return "";
     }
 
-    int getCompteurEntrprise(){
-        return compteurEntreprise;
-    }
+
 

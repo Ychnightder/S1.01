@@ -34,7 +34,7 @@ La liste des jeux de test actuels est la suivante.
 
 * in-sp1-base.txt    : usage normal des commandes "inscription", "mission", "consultation" et "acceptation" 
 * in-sp1-erreur.txt  : usage provoquant tous les messages d'erreur de ces mêmes commandes 
-* in-sp2-base.txt    : usage normal des commandes "rapport" et "detail"
+* in-sp2-base.txt    : usage normal des commandes "r" et "detail"
 * in-sp2-erreur.txt  : usage provoquant tous les messages d'erreur de ces mêmes commandes
 * in-sp3-base.txt    : usage normal de la commande "recapitulatif"
 * in-sp3-erreur.txt  : usage provoquant tous les messages d'erreur de cette commande

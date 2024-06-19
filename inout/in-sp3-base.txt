@@ -7,26 +7,26 @@ recapitulatif 1
 acceptation 2 1
 recapitulatif 1
 recapitulatif 2
-rapport 1 0
+r 1 0
 recapitulatif 1
 recapitulatif 2
 mission 1 Mission2 10.00
 consultation
 acceptation 2 2
-rapport 2 2
+r 2 2
 recapitulatif 1
 recapitulatif 2
 detail 3
 acceptation 3 3
-rapport 3 0
+r 3 0
 recapitulatif 1
 recapitulatif 3
 mission 1 Mission3 15.00
 acceptation 2 4
-rapport 4 1
+r 4 1
 acceptation 3 5
 recapitulatif 3
-rapport 5 2
+r 5 2
 recapitulatif 1
 recapitulatif 3
 exit

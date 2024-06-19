@@ -9,11 +9,12 @@ using  namespace std;
 
     struct mission{
         int idMission;
+        int idAncienMission;
         string nomEntreprise;
         string nom;
         double prix;
         int soustraitance;
-        rapport rapport;
+        string detail;
     };
 
     extern int tailleTabM;
@@ -24,6 +25,6 @@ using  namespace std;
     void initTabMission();
     void suppTabMission();
     void Mission();
-    int getCompteurMission();
+    void RepublierMission( int idEntreprise , string nom , double remuneration );
     void affichageMission();
 #endif //S1_01_MISSION_H

@@ -6,14 +6,14 @@ mission 1 Mission1 5.00
 detail 2
 acceptation 2 1
 consultation
-rapport 1 -1
-rapport 1 4
-rapport 0 0
-rapport 2 0
-rapport 1 1
+r 1 -1
+r 1 4
+r 0 0
+r 2 0
+r 1 1
 acceptation 3 2
-rapport 2 2
+r 2 2
 acceptation 4 3
-rapport 3 3
+r 3 3
 acceptation 3 4
 exit

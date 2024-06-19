@@ -7,19 +7,21 @@
 #include "../mission/mission.h"
 
     struct Acceptation{
-            string idA;
+            string vide;
+            int idAccp;
+            int ancienID;
             Entreprise* e;
             mission* m;
     };
 
     extern Acceptation* tabAttribue;
     extern const int tailleAttribue;
-    extern int comteurAc;
+    extern int compteurAc;
 
 
     void acceptation();
     void initTabAttribue();
     void suppTabAttribue();
-    int getCompteurAttribue();
+    void affichageAttribue();
 
 #endif //S1_01_ACCEPTATION_H

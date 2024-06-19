@@ -24,7 +24,6 @@ using namespace std;
     void suppTabEntreprise();
     bool estDejaEntreprise(string& nom);
     bool verifRole(string& role);
-    int getCompteurEntrprise();
     void inscription();
     void affichageEntreprise();
     bool verifOperateurId(int id);
