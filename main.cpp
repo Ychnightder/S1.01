@@ -25,7 +25,7 @@ int main() {
             {"exit", fin},
             {"r" , Rapport},
            {"recapitulatif" , recapitulatif},
-//            {"Sous-traitance" ,SousTraitance },
+            {"Sous-traitance" ,SousTraitance },
             {"afficherE", affichageEntreprise},
             {"afficherM", affichageMission},
             {"afficherA", affichageAttribue},
