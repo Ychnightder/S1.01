@@ -29,14 +29,24 @@
         if (verifA) {
             auto itMiss = tabMissionNonAttribue.find(mission);
             if (itMiss !=tabMissionNonAttribue.end()){
+                itMiss->second.attribue = itEntreprise->second;
                 tabAttribue.insert({mission,itMiss->second});
                 tabMissionNonAttribue.erase(itMiss);
                 cout << "Acceptation enregistree"<< endl;
             }
         }
+
+
     }
     void affichageAttribue() {
         for (const auto& item : tabAttribue) {
-            std::cout << item.first << " " << item.second.nomMissions << " " << item.second.remunerations << " " << item.second.entreprisePublie.nomEntreprise << std::endl;
+            std::cout << item.first << " "
+            << item.second.nomMissions << " "
+            << item.second.remunerations << " "
+            << item.second.entreprisePublie.nomEntreprise <<" Attribue a "
+            << item.second.attribue.nomEntreprise << std::endl;
         }
     }
+
+
+

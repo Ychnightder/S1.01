@@ -3,7 +3,6 @@
 #include "mission.h"
 
      int compteurMission = 1;
-
      map<int,mission> tabMissionNonAttribue;
 
     void Mission(){
@@ -28,7 +27,8 @@
         }
 
         if (verifmission) {
-            mission m = {compteurMission, nomMission, remuneration, 0, "", itEntreprise->second };
+            mission m = {compteurMission, nomMission, remuneration, 0, "", "" , "","","" , itEntreprise->second
+                         };
             tabMissionNonAttribue.insert({compteurMission, m});
             cout << "Mission publiee (" << compteurMission << ")" << endl;
             compteurMission++;

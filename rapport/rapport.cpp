@@ -2,6 +2,7 @@
 #include "iostream"
 #include "../mission/mission.h"
 #include "../acceptation/acceptation.h"
+#include "../Recapitulatif/Recapitulatif.h"
 
     using namespace  std;
 
@@ -58,15 +59,23 @@
        if (verifrapport) {
            auto it = tabAttribue.find(idMission);
            if (it != tabAttribue.end()) {
-               it->second.detail = getDetail(codeRapport);
+               for (int i = 0; i < nbDetail; ++i) {
+                   if (it->second.detail[i].empty()){
+                       it->second.detail[i] = getDetail(codeRapport);
+                       break;
+                   }
+               }
                switch (codeRapport) {
                    case ZERO:
+                       tabTerminer.insert({it->second.idMission, it->second});
+                       tabAttribue.erase(it);
                        cout << "Rapport enregistre" << endl;
                        break;
 
                    case UN:
                    case DEUX:
                    case TROIS:
+                       tabTerminer.insert({it->second.idMission, it->second});
                        it->second.idMission = compteurMission;
                        it->second.remunerations = majorerMission(it->second.remunerations, codeRapport);
                        tabMissionNonAttribue.insert({compteurMission, it->second});

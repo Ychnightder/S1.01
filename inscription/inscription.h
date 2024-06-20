@@ -7,6 +7,7 @@
     struct Entreprise{
         string nomEntreprise;
         string roleEntreprise;
+
     };
 
     extern const int nbRole;

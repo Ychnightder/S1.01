@@ -6,18 +6,20 @@
 
 using  namespace std;
 
-    struct mission{
+ const int nbDetail = 5;
+
+struct mission{
         int idMission;
         string nomMissions;
         double remunerations;
         int soustraitances;
-        string detail;
+        string detail[nbDetail];
         Entreprise entreprisePublie;
+        Entreprise attribue;
     };
 
     extern map<int,mission> tabMissionNonAttribue;
     extern int compteurMission;
-
 
     void Mission();
     void affichageMission();

@@ -7,6 +7,7 @@
 #include "acceptation/acceptation.h"
 #include "string"
 #include "rapport/rapport.h"
+#include "Recapitulatif/Recapitulatif.h"
 
 
 struct Command{
@@ -23,11 +24,11 @@ int main() {
             {"detail", detail},
             {"exit", fin},
             {"r" , Rapport},
-//           {"Recapitulatif" , Recapitulatif},
+           {"recapitulatif" , recapitulatif},
 //            {"Sous-traitance" ,SousTraitance },
             {"afficherE", affichageEntreprise},
             {"afficherM", affichageMission},
-            {"afficherA", affichageAttribue}
+            {"afficherA", affichageAttribue},
 
     };
 
@@ -45,6 +46,9 @@ int main() {
 
 
 
+//S1_01.exe < in-sp3-base.txt > test.txt
+// fc /w out-sp3-base.txt test.txt
+
 //S1_01.exe < in-sp2-base.txt > test.txt
 // fc /w out-sp2-base.txt test.txt
 
@@ -54,10 +58,29 @@ int main() {
 //S1_01.exe < in-sp1-erreur.txt > test.txt
 // fc /w out-sp1-erreur.txt test.txt
 
-//inscription op orange
-//inscription in vert
-//inscription ag rouge
-//mission 1 m1 25.55
+//inscription OP Operateur
+//inscription IN Intervenant1
+//mission 1 Mission1 5.00
+//mission 1 Mission2 5.00
+//mission 1 Mission3 5.00
+//rc 1
+//ac 2 1
+//ac 2 2
+//ac 2 3
+//rc 1
+
+
+//inscription AG Agence
+//inscription IN Intervenant1
+//mission 1 Mission1 5.00
+//recapitulatif 1
 //acceptation 2 1
-//r 1 3
-//affichageA
+//recapitulatif 1
+//recapitulatif 2
+//r 1 0
+//recapitulatif 1
+//recapitulatif 2
+//mission 1 Mission2 10.00
+//consultation
+//acceptation 2 2
+//r 2 2

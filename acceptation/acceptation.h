@@ -9,9 +9,10 @@
 
 
     extern map<int,mission> tabAttribue;
+
     extern int compteurAc;
+
 
     void acceptation();
     void affichageAttribue();
-
 #endif //S1_01_ACCEPTATION_H
