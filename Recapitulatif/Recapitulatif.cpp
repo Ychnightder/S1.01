@@ -19,12 +19,16 @@
         if (verifRecap) {
 
             if (itEntreprise->second.roleEntreprise == "OP") {
-                if (!tabMissionNonAttribue.empty()) {
-                    // Non attribuées
-                    cout << "* non attribuees" << endl;
+                if (!tabMissionNonAttribue.empty()  ) {
+                    bool estNonAttribue = false;
                     for (const auto &item: tabMissionNonAttribue) {
-                        if (itEntreprise->second.nomEntreprise == item.second.entreprisePublie.nomEntreprise) {
-                            cout << "  "<< item.first << " "
+                        if (itEntreprise->second.nomEntreprise == item.second.entreprisePublie.nomEntreprise || itEntreprise->second.nomEntreprise == item.second.attribue.nomEntreprise) {
+                            if (!estNonAttribue) {
+                                cout << "* non attribuees" << endl;
+                                estNonAttribue = true;
+                            }
+
+                            cout << "   "<< item.first << " "
                                  << item.second.nomMissions << " "
                                  << item.second.entreprisePublie.nomEntreprise << " "
                                  << fixed << setprecision(2) << item.second.remunerations << " "
@@ -34,11 +38,14 @@
                 }
 
                 if (!tabAttribue.empty()){
-                // Attribuées
-                    cout << "* attribuees" << endl;
+                    bool estAttribue = false;
                     for (const auto &item: tabAttribue) {
                         if (itEntreprise->second.nomEntreprise == item.second.entreprisePublie.nomEntreprise) {
-                            cout << "  "<< item.first << " "
+                            if (!estAttribue){
+                                cout << "* attribuees" << endl;
+                                estAttribue = true;
+                            }
+                            cout << "   "<< item.first << " "
                                  << item.second.nomMissions << " "
                                  << item.second.entreprisePublie.nomEntreprise << " "
                                  << fixed << setprecision(2) << item.second.remunerations << " "
@@ -48,10 +55,15 @@
                 }
                 if (!tabTerminer.empty()) {
                     // Terminées
-                    cout << "* terminees" << endl;
+
+                    bool estTerminees = false;
                     for (const auto &item: tabTerminer) {
                         if (itEntreprise->second.nomEntreprise == item.second.entreprisePublie.nomEntreprise) {
-                            cout << "  "<< item.first << " "
+                            if (!estTerminees){
+                                cout << "* terminees" << endl;
+                                estTerminees = true;
+                            }
+                            cout << "   "<< item.first << " "
                                  << item.second.nomMissions << " "
                                  << item.second.entreprisePublie.nomEntreprise << " "
                                  << fixed << setprecision(2) << item.second.remunerations << " "
@@ -59,14 +71,48 @@
                         }
                     }
                 }
-            } else{
+            } else if (itEntreprise->second.roleEntreprise == "AG"){
+                bool hasNonAttribue = false;
+                for (const auto &item: tabMissionNonAttribue) {
+                    if (itEntreprise->second.nomEntreprise == item.second.entreprisePublie.nomEntreprise) {
+                        if (!hasNonAttribue) {
+                            cout << "* non attribuees" << endl;
+                            hasNonAttribue = true;
+                        }
+                        cout << "  " << item.first << " "
+                             << item.second.nomMissions << " "
+                             << item.second.entreprisePublie.nomEntreprise << " "
+                             << fixed << setprecision(2) << item.second.remunerations << " "
+                             << "(" << item.second.soustraitances << ")" << endl;
+                    }
+                }
+
+                bool hasRealisees = false;
+                for (const auto &item: tabTerminer) {
+                    if (itEntreprise->second.nomEntreprise == item.second.entreprisePublie.nomEntreprise) {
+                        if (!hasRealisees) {
+                            cout << "* realisees" << endl;
+                            hasRealisees = true;
+                        }
+                        cout << " " << item.first << " "
+                             << item.second.nomMissions << " "
+                             << item.second.entreprisePublie.nomEntreprise << " "
+                             << fixed << setprecision(2) << item.second.remunerations << " "
+                             << "(" << item.second.soustraitances << ")" << endl;
+                    }
+                }
+            }
+            else{
 
                 if (!tabAttribue.empty()) {
-                    cout << "* a realiser" << endl;
-
+                    bool estARealiser = false;
                     for (const auto &item: tabAttribue) {
                         if (itEntreprise->second.nomEntreprise == item.second.attribue.nomEntreprise) {
-                            cout << "  "<< item.first << " "
+                            if (!estARealiser){
+                                cout << "* a realiser" << endl;
+                                estARealiser = true;
+                            }
+                            cout << "   "<< item.first << " "
                                  << item.second.nomMissions << " "
                                  << item.second.entreprisePublie.nomEntreprise << " "
                                  << fixed << setprecision(2) << item.second.remunerations << " "
@@ -76,10 +122,14 @@
                 }
 
                 if (!tabTerminer.empty()) {
-                    cout << "* realisees" << endl;
+                    bool estRealiser = false;
                     for (const auto &item: tabTerminer) {
                         if (itEntreprise->second.nomEntreprise == item.second.attribue.nomEntreprise) {
-                            cout << " "<< item.first << " "
+                            if (!estRealiser){
+                                cout << "* realisees" << endl;
+                                estRealiser = true;
+                            }
+                            cout << "   "<< item.first << " "
                                  << item.second.nomMissions << " "
                                  << item.second.entreprisePublie.nomEntreprise << " "
                                  << fixed << setprecision(2) << item.second.remunerations << " "

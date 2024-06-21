@@ -2,57 +2,34 @@ Inscription realisee (1)
 Inscription realisee (2)
 Inscription realisee (3)
 Mission publiee (1)
-* non attribuees
-  1 Mission1 Operateur 5.00 (0)
+1 Dupont Orange 30.50 (0)
 Acceptation enregistree
+Rapport enregistre (2)
+2 Dupont Orange 31.72 (0)
+Recepteur defectueux
+Sous-traitance enregistree (3)
+3 Dupont FiberAgency 28.40 (1)
+3 Dupont FiberAgency 28.40 (1)
+Recepteur defectueux
 * attribuees
-  1 Mission1 Operateur 5.00 (0)
-* a realiser
-  1 Mission1 Operateur 5.00 (0)
-Rapport enregistre
+   2 Dupont Orange 31.72 (0)
 * terminees
-  1 Mission1 Operateur 5.00 (0)
-* realisees
- 1 Mission1 Operateur 5.00 (0)
-Mission publiee (2)
-2 Mission2 Operateur 10.00 (0)
-Acceptation enregistree
-Rapport enregistre (3)
+   1 Dupont Orange 30.50 (0)
 * non attribuees
-  3 Mission2 Operateur 10.55 (0)
-* terminees
-  1 Mission1 Operateur 5.00 (0)
-  2 Mission2 Operateur 10.00 (0)
+  3 Dupont FiberAgency 28.40 (1)
+* a realiser
+   2 Dupont Orange 31.72 (0)
 * realisees
- 1 Mission1 Operateur 5.00 (0)
- 2 Mission2 Operateur 10.00 (0)
-3 Mission2 Operateur 10.55 (0)
-Pas de signal dans le boitier general
+   1 Dupont Orange 30.50 (0)
+Inscription realisee (4)
 Acceptation enregistree
 Rapport enregistre
+Aucune mission disponible
+* attribuees
+   2 Dupont Orange 31.72 (0)
 * terminees
-  1 Mission1 Operateur 5.00 (0)
-  2 Mission2 Operateur 10.00 (0)
-  3 Mission2 Operateur 10.55 (0)
+   1 Dupont Orange 30.50 (0)
 * realisees
- 3 Mission2 Operateur 10.55 (0)
-Mission publiee (4)
-Acceptation enregistree
-Rapport enregistre (5)
-Acceptation enregistree
-* a realiser
-  5 Mission3 Operateur 15.00 (0)
+ 3 Dupont FiberAgency 28.40 (1)
 * realisees
- 3 Mission2 Operateur 10.55 (0)
-Rapport enregistre (6)
-* non attribuees
-  6 Mission3 Operateur 15.82 (0)
-* terminees
-  1 Mission1 Operateur 5.00 (0)
-  2 Mission2 Operateur 10.00 (0)
-  3 Mission2 Operateur 10.55 (0)
-  4 Mission3 Operateur 15.00 (0)
-  5 Mission3 Operateur 15.00 (0)
-* realisees
- 3 Mission2 Operateur 10.55 (0)
- 5 Mission3 Operateur 15.00 (0)
+   3 Dupont FiberAgency 28.40 (1)

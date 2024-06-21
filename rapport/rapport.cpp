@@ -12,7 +12,7 @@
             {ZERO , "Succes", 0},
             {UN,"Local non accessible" , 0},
             {DEUX,"Pas de signal dans le boitier general" , 0.055},
-            {TROIS ,"Recepteur defectueux", 0.4 }
+            {TROIS ,"Recepteur defectueux", 0.04 }
     };
 
 

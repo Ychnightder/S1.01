@@ -20,4 +20,6 @@ add_executable(S1_01
         acceptation/acceptation.h
         acceptation/acceptation.cpp
         Recapitulatif/Recapitulatif.h
-        Recapitulatif/Recapitulatif.cpp)
+        Recapitulatif/Recapitulatif.cpp
+        sous_traitance/sous_traitance.h
+        sous_traitance/sous_traitance.cpp)
