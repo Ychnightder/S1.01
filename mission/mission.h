@@ -3,27 +3,25 @@
 #define S1_01_MISSION_H
 #include <string>
 #include "../inscription/inscription.h"
-#include "../rapport/rapport.h"
 
 using  namespace std;
 
-    struct mission{
+ const int nbDetail = 5;
+
+struct mission{
         int idMission;
-        string nomEntreprise;
-        string nom;
-        double prix;
-        int soustraitance;
-        rapport rapport;
+        string nomMissions;
+        double remunerations;
+        int soustraitances;
+        string detail[nbDetail];
+        Entreprise entreprisePublie;
+        Entreprise attribue;
     };
 
-    extern int tailleTabM;
-    extern mission* tabMissionNonAttribue;
-    extern int compteurM;
+    extern map<int,mission> tabMissionNonAttribue;
+    extern int compteurMission;
 
-
-    void initTabMission();
-    void suppTabMission();
     void Mission();
-    int getCompteurMission();
     void affichageMission();
+
 #endif //S1_01_MISSION_H

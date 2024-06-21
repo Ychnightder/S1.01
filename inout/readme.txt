@@ -8,7 +8,7 @@ Vous pouvez copier une à une les commandes de in-xxx.txt pour les coller une à
 
 Vous pouvez aussi éviter tout copier/coller en redirigeant l'entrée de votre programme. Cela peut se faire facilement à partir d'une invite de commande (ou d'un terminal).
 
-Sous windows, le fichier exécutable résultant de la compilation porte le nom du projet suivi de .exe. Sous Visual Studio, il se trouve dans le répertoire Debug de la "solution" contenant le projet.
+Sous windows, le fichier exécutable résultant de la compilation porte le nomMission du projet suivi de .exe. Sous Visual Studio, il se trouve dans le répertoire Debug de la "solution" contenant le projet.
 
 Vous devez copier les fichiers in-xxx.txt et out-xxx.txt dans le répertoire contenant ce fichier exécutable. Lancez ensuite une invite de commande dans ce même répertoire et taper les commandes suivantes. On fait l'hyptothèse que votre projet est nommé s1-01 et donc que l'exécutable est s1-01.exe.
 
@@ -34,7 +34,7 @@ La liste des jeux de test actuels est la suivante.
 
 * in-sp1-base.txt    : usage normal des commandes "inscription", "mission", "consultation" et "acceptation" 
 * in-sp1-erreur.txt  : usage provoquant tous les messages d'erreur de ces mêmes commandes 
-* in-sp2-base.txt    : usage normal des commandes "rapport" et "detail"
+* in-sp2-base.txt    : usage normal des commandes "r" et "detail"
 * in-sp2-erreur.txt  : usage provoquant tous les messages d'erreur de ces mêmes commandes
 * in-sp3-base.txt    : usage normal de la commande "recapitulatif"
 * in-sp3-erreur.txt  : usage provoquant tous les messages d'erreur de cette commande

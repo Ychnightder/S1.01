@@ -1,0 +1,28 @@
+Inscription realisee (1)
+Inscription realisee (2)
+Inscription realisee (3)
+Mission publiee (1)
+1 Mission1 Operateur 5.00 (0)
+Acceptation enregistree
+Aucune mission disponible
+Rapport enregistre
+Aucune mission disponible
+Mission publiee (2)
+2 Mission2 Operateur 10.00 (0)
+Acceptation enregistree
+Rapport enregistre (3)
+3 Mission2 Operateur 10.55 (0)
+3 Mission2 Operateur 10.55 (0)
+Pas de signal dans le boitier general
+Acceptation enregistree
+Rapport enregistre
+Aucune mission disponible
+Inscription realisee (4)
+Mission publiee (4)
+Acceptation enregistree
+Rapport enregistre (5)
+Acceptation enregistree
+Rapport enregistre (6)
+6 Mission3 Operateur 15.82 (0)
+Pas de signal dans le boitier general
+Local non accessible

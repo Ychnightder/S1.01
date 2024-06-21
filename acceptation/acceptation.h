@@ -6,20 +6,13 @@
 #include "../inscription/inscription.h"
 #include "../mission/mission.h"
 
-    struct Acceptation{
-            string idA;
-            Entreprise* e;
-            mission* m;
-    };
 
-    extern Acceptation* tabAttribue;
-    extern const int tailleAttribue;
-    extern int comteurAc;
+
+    extern map<int,mission> tabAttribue;
+
+    extern int compteurAc;
 
 
     void acceptation();
-    void initTabAttribue();
-    void suppTabAttribue();
-    int getCompteurAttribue();
-
+    void affichageAttribue();
 #endif //S1_01_ACCEPTATION_H

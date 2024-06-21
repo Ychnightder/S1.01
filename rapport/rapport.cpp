@@ -1,8 +1,20 @@
 #include "rapport.h"
 #include "iostream"
 #include "../mission/mission.h"
+#include "../acceptation/acceptation.h"
+#include "../Recapitulatif/Recapitulatif.h"
 
-using namespace  std;
+    using namespace  std;
+
+     const int tailleTabR = 4;
+
+    rapport tabRapport[tailleTabR] = {
+            {ZERO , "Succes", 0},
+            {UN,"Local non accessible" , 0},
+            {DEUX,"Pas de signal dans le boitier general" , 0.055},
+            {TROIS ,"Recepteur defectueux", 0.04 }
+    };
+
 
 
 
@@ -10,57 +22,88 @@ using namespace  std;
         return c == UN || c == DEUX || c == TROIS || c == ZERO;
     }
 
+    bool verifiMissio(int id){
+        auto it = tabAttribue.find(id);
+        if (it != tabAttribue.end()){
+            return true;
+        }
+        return false;
+     }
+
+    string getDetail(int cr){
+        for (int i = 0; i < tailleTabR; ++i) {
+            if (tabRapport[i].code == cr){
+                return tabRapport[i].Signification;
+            }
+        }
+        return "";
+    }
 
     void Rapport(){
-        int idMission;
-        int codeRapport;
+        int idMission ;
+        int codeRapport  ;
         bool verifrapport = true;
-        cin >> idMission;
-        cin >> codeRapport;
 
-        for (int i = 0; i < getCompteurMission(); ++i) {
-            if (idMission != tabMissionNonAttribue[i].idMission){
-                cout << "Mission incorrecte ";
-                verifrapport = false;
-                break;
-            }
-        }
+        cin >> idMission >> codeRapport;
+
         if (!verifiCode(codeRapport)){
-            cout << "Code de retour incorrect";
+            cout << "Code de retour incorrect" << endl;
             verifrapport = false;
-            return;
         }
 
-        if (verifrapport){
+        if (!verifiMissio(idMission)){
+            cout << "Mission incorrecte" << endl;
+            verifrapport = false;
+        }
 
-            for (int i = 0; i < getCompteurMission(); ++i) {
-                if (tabMissionNonAttribue[i].idMission == idMission){
-                    rapport rapporGenerale = *new rapport;
+       if (verifrapport) {
+           auto it = tabAttribue.find(idMission);
+           if (it != tabAttribue.end()) {
+               for (int i = 0; i < nbDetail; ++i) {
+                   if (it->second.detail[i].empty()){
+                       it->second.detail[i] = getDetail(codeRapport);
+                       break;
+                   }
+               }
+               switch (codeRapport) {
+                   case ZERO:
+                       tabTerminer.insert({it->second.idMission, it->second});
+                       tabAttribue.erase(it);
+                       cout << "Rapport enregistre" << endl;
+                       break;
 
-                    switch (codeRapport) {
-                        case ZERO:
-                            rapporGenerale.detail ="Succes";
-                            rapporGenerale.majoration = 0;
-                            break;
+                   case UN:
+                   case DEUX:
+                   case TROIS:
+                       tabTerminer.insert({it->second.idMission, it->second});
+                       it->second.idMission = compteurMission;
+                       it->second.remunerations = majorerMission(it->second.remunerations, codeRapport);
+                       tabMissionNonAttribue.insert({compteurMission, it->second});
+                       tabAttribue.erase(it);
+                       cout << "Rapport enregistre (" << compteurMission++ << ")" << endl;
+                       break;
+               }
+           }
+        }
+        return;
+    }
 
-                        case UN:
-                            rapporGenerale.detail ="Local non accessible";
-                            rapporGenerale.majoration = 0;
-                            break;
-                        case DEUX:
-                            rapporGenerale.detail ="Pas de signal dans le boitier general";
-                            rapporGenerale.majoration = 0.055;
-                            break;
-
-                        case TROIS:
-                            rapporGenerale.detail ="Recepteur defectueux";
-                            rapporGenerale.majoration = 0.4;
-                            break;
-                    }
-                    tabMissionNonAttribue[i].rapport =rapporGenerale;
-                    break;
-                }
+    double getMajoration(int cr){
+        for (int i = 0; i < tailleTabR; ++i) {
+            if (tabRapport[i].code == cr){
+                return tabRapport[i].majoration;
             }
-
         }
+        return 0;
+    }
+
+    double majorerMission(double prixMission , double codeR){
+            double Majoration = getMajoration(codeR);
+            if(prixMission > 0) {
+                double sommeAug = prixMission * Majoration;
+                prixMission += sommeAug;
+            } else  {
+                cout << "prix Mission incorrect" <<endl;
+            }
+            return prixMission;
     }

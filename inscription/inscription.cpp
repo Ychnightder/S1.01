@@ -3,36 +3,27 @@
 #include "inscription.h"
 
     const int nbRole = 3; // Nombre de rôles
-    const char* roleTab[nbRole] = {"AG", "OP", "IN"};
+    const string roleTab[nbRole] = {"AG", "OP", "IN"};
 
-    const int tailleTab = 50;
-    Entreprise* tabEntreprise = nullptr;
-    int compteurEntreprise = 0;
+    map <int,Entreprise> tabEntreprise;
 
-
-    void initTabEntreprise() {
-        tabEntreprise = new Entreprise[tailleTab];
-    }
+    int compteurEntreprise = 1;
 
 
-    void suppTabEntreprise() {
-        delete[] tabEntreprise;
-        tabEntreprise = nullptr;
-    }
-
-    bool estDejaEntreprise(string& nom) {
-        for (int i = 0; i < tailleTab; ++i) {
-            if (nom == tabEntreprise[i].nomEntreprise) {
+    bool estDejaPresent(string& nom) {
+        for (const auto& pair: tabEntreprise) {
+            if (pair.second.nomEntreprise == nom){
                 return true;
+                break;
             }
-         }
+        }
         return false;
     }
 
     bool verifRole(string& role){
         for (int i = 0; i < nbRole; ++i) {
             if (role == roleTab[i]) {
-                return  true;
+                return true;
                 break;
             }
         }
@@ -40,9 +31,10 @@
     }
 
     void inscription(){
+        bool  verifInscrit = true;
         string role;
         string nom;
-        bool  verifInscrit = true;
+
         cin >> role;
         cin >> nom;
 
@@ -51,57 +43,31 @@
         }
 
 
-        if (estDejaEntreprise(nom)){
+        if (estDejaPresent(nom)){
            cout << "Nom incorrect"<< endl;
             verifInscrit = false;
         }
-        else if (!verifRole(role)) {
+         if (!verifRole(role)) {
             cout << "Role incorrect" << endl;
             verifInscrit = false;
         }
 
         if (verifInscrit) {
-            for (int i = 0; i < tailleTab; ++i) {
-                if (tabEntreprise[i].nomEntreprise.empty()) {
-                    tabEntreprise[i].idEntreprise = compteurEntreprise + 1;
-                    tabEntreprise[i].nomEntreprise = nom;
-                    tabEntreprise[i].roleEntreprise = role;
-                    compteurEntreprise++;
-                    std::cout << "Inscription realisee (" << compteurEntreprise << ")" << std::endl;
-                    break;
-                }
-            }
+            Entreprise e = {nom, role};
+            tabEntreprise[compteurEntreprise] = e;
+            tabEntreprise.insert({compteurEntreprise, e});
+            cout << "Inscription realisee (" << compteurEntreprise << ")" << endl;
+            compteurEntreprise++;
         }
         return;
     }
 
-
-
     void affichageEntreprise(){
-        for (int i = 0; i < compteurEntreprise; ++i) {
-            cout << tabEntreprise[i].idEntreprise<< " " << tabEntreprise[i].roleEntreprise<< " " <<tabEntreprise[i].nomEntreprise << "\n";
+        for (auto item = tabEntreprise.begin(); item != tabEntreprise.end(); item++ ) {
+            cout << item->first << " " << item->second.nomEntreprise << " " << item->second.roleEntreprise << endl;
         }
     }
 
-    bool verifOperateurId(int id){
-        for (int i = 0; i < compteurEntreprise; ++i) {
-            if (tabEntreprise[i].idEntreprise == id && tabEntreprise[i].roleEntreprise == "OP"){
-                return true;
-            }
-        }
-        return false;
-    }
 
-    string NomEntreprisePourMission(int id){
-        for (int i = 0; i < compteurEntreprise; ++i) {
-            if (tabEntreprise[i].idEntreprise == id && tabEntreprise->roleEntreprise == "OP"){
-                return tabEntreprise[i].nomEntreprise;
-            }
-        }
-        return "x";
-    }
 
-    int getCompteurEntrprise(){
-        return compteurEntreprise;
-    }
 
